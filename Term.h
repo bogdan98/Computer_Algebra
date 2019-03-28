@@ -3,6 +3,9 @@
 #include <list>
 
 //class that defines a term, which can be any expression
+//all the terms (for example trigonometric) extend class term
+//if one wants to add their function (for example ln or exp), it can easily be added 
+//without worrying about the rest of the code
 class Term
 {
 private:
