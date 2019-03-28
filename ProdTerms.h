@@ -9,15 +9,18 @@
 #include <math.h>
 #include <stdio.h>
 
+//class used to represent product of t1*t2*..
+//where t1, t2,... can be any terms
+
 class ProdTerms :
 	public Term
 {
 private:
-	std::list<Term*> terms;
+	std::list<Term*> terms; //list of terms in the product
 	std::list<Term*> :: iterator it;
 	std::list<Term*> :: iterator its;
-	double coeff;
-	std::string fullName;
+	double coeff; //coefficient in front of product
+	std::string fullName; //full name of the product term
 public:
 	ProdTerms();
 	std::list<Term*> getList();
@@ -29,7 +32,7 @@ public:
 	void setFullName();
 	virtual std::string getFullName();
 	virtual void display();
-	ProdTerms* nthder(int n);
+	ProdTerms* nthder(int n); //intermediate function used for taking the derivative
 	Term* deriv();
 	void clean();
 	virtual void setVar(std::string nv);
