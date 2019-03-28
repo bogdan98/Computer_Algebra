@@ -63,12 +63,6 @@ void Term::display() {
 	std::cout << getFullName();
 }
 
-
-void Term::mult(double p) {
-	power += p;
-	setFullName();
-}
-
 void Term::red_coeff() {
 	this->coeff = 1;
 }
