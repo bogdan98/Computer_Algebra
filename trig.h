@@ -3,6 +3,7 @@
 #include "Term.h"
 #include "ProdTerms.h"
 
+//class that defines operations for trigonometric functions
 class trig :
 	public Term
 {
