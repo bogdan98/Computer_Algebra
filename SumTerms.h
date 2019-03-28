@@ -2,14 +2,16 @@
 #include "ProdTerms.h"
 #include <iostream>
 
+//class that defines an expression which has the form
+//a*(t1 + t2 + ..)^n, where t1, t2, etc. are any terms
+//i.e. can be simple functions or products or of the form
+//a*(t1 + t2 + ..)^n
 class SumTerms:
 	public Term
 {
 private:
 	std::list<Term*> terms;
 	std::list<Term*> ::iterator it;
-	//std::list<SumTerms*> sterms;
-	//std::list<SumTerms*> ::iterator its;
 	Term *func;
 	std::string fullName;
 	std::string varName;
@@ -21,7 +23,6 @@ public:
 	virtual double getCoeff();
 	virtual double getPower();
 	void setFullName();
-	//bool isEqual(ProdTerms *pt);
 	void addCoeff(double delta);
 	virtual std::string getFullName();
 	std::list<Term*> getTerms();
