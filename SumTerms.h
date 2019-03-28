@@ -3,16 +3,16 @@
 #include <iostream>
 
 //class that defines an expression which has the form
-//a*(t1 + t2 + ..)^n, where t1, t2, etc. are any terms
+//f(t1 + t2 + ..), where t1, t2, etc. are any terms
 //i.e. can be simple functions or products or of the form
-//a*(t1 + t2 + ..)^n
+//f(t1 + t2 + ..)
 class SumTerms:
 	public Term
 {
 private:
 	std::list<Term*> terms;
 	std::list<Term*> ::iterator it;
-	Term *func;
+	Term *func; //defines f from f(t1 + t2 + ...)
 	std::string fullName;
 	std::string varName;
 public:
