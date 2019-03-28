@@ -10,11 +10,14 @@
 
 int main()
 {
+	//this is an example of how the implementation is used
+	//to build expressions, display them and take their derivatives
 	trig* t1 = new trig(1, 1, "sin");
 	polyterm *t2 = new polyterm(1, 1);
 	ProdTerms* pt1 = new ProdTerms();
 	pt1->add(t2);
 	pt1->add(t1);
+	
 	trig *func1 = new trig(2, 2, "cos");
 	polyterm *func2 = new polyterm(1, 6);
 	SumTerms *st1 = new SumTerms(func1);
@@ -23,6 +26,7 @@ int main()
 	st1->add(pt1);
 	st2->add(st1);
 	st2->add(t3);
+	
 	((((t3->deriv())->deriv())->deriv()))->display();
 	
 }
