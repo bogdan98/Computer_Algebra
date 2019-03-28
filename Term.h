@@ -15,15 +15,14 @@ public:
 	Term();
 	Term(double c, double p, std::string nn, std::string vv);
 	std::string getName();
-	virtual double getCoeff();
-	double getPower();
-	std::string getVar();
-	virtual void display();
-	virtual void setFullName();
-	void mult(double p);
+	virtual double getCoeff(); //returns coefficient
+	double getPower(); //returns power
+	std::string getVar(); //returns expression inside the function
+	virtual void display(); //display the expression
+	virtual void setFullName(); //set full name using the internal information
 	virtual void red_coeff(); //set coefficient equal to 1
-	virtual std::string getFullName();
+	virtual std::string getFullName(); //returns full name of the function
 	virtual void setVar(std::string s1); //set the expression inside the function to s1
-	virtual Term* deriv();
+	virtual Term* deriv(); //returns derivative of the function
 };
 
